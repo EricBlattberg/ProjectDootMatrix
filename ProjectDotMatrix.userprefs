@@ -1,0 +1,20 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\blowdownthedoors.js">
+    <Files>
+      <File FileName="Assets\CharacterSystem\Character_System\Scripts\HeroMotor.cs" Line="336" Column="28" />
+      <File FileName="Assets\Scripts\ThirdPersonController.cs" Line="218" Column="62" />
+      <File FileName="Assets\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonController.js" Line="243" Column="56" />
+      <File FileName="Assets\CharacterSystem\Character_System\Scripts\HeroCamera.cs" Line="1" Column="1" />
+      <File FileName="Assets\touch.js" Line="1" Column="1" />
+      <File FileName="Assets\collectibletouch.js" Line="19" Column="25" />
+      <File FileName="Assets\CollectibleControl.js" Line="18" Column="30" />
+      <File FileName="Assets\blowdownthedoors.js" Line="14" Column="23" />
+      <File FileName="Assets\openMe.js" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
