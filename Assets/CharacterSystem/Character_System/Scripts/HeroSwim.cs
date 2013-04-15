@@ -52,9 +52,9 @@ public class HeroSwim : MonoBehaviour
 				rootB = t;
 		}
 		// FX
-		GameObject gO = (GameObject)Resources.Load( "FX_WaterSurf" );
-		surfSplash = (GameObject)Instantiate (gO, hero.position, Quaternion.identity);
-		surfSplash.active = false;
+//		GameObject gO = (GameObject)Resources.Load( "FX_WaterSurf" );
+//		surfSplash = (GameObject)Instantiate (gO, hero.position, Quaternion.identity);
+//		surfSplash.active = false;
 	}
 	
 	//=================================================================================================================o

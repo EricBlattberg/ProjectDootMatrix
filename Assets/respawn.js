@@ -2,7 +2,7 @@
 
 var spawn : Transform;
 var player : GameObject;
-var spawndistance : int = 200;
+var spawndistance : float = 200.0;
 
 function Start () {
 

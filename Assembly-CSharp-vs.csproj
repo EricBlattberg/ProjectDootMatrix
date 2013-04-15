@@ -47,6 +47,8 @@
      <Compile Include="Assets\CharacterSystem\Character_System\Resources\FX_Helper\TimeKiller.cs" />
      <Compile Include="Assets\CharacterSystem\Character_System\Scripts\HeroAnim.cs" />
      <Compile Include="Assets\CharacterSystem\Character_System\Scripts\HeroCamera.cs" />
+     <Compile Include="Assets\CharacterSystem\Character_System\Scripts\HeroCameraHigh.cs" />
+     <Compile Include="Assets\CharacterSystem\Character_System\Scripts\HeroCameraLow.cs" />
      <Compile Include="Assets\CharacterSystem\Character_System\Scripts\HeroClimb.cs" />
      <Compile Include="Assets\CharacterSystem\Character_System\Scripts\HeroKeymap.cs" />
      <Compile Include="Assets\CharacterSystem\Character_System\Scripts\HeroMotor.cs" />

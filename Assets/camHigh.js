@@ -1,17 +1,12 @@
 #pragma strict
-
 var mainCamera : Transform;
-var mainRot = mainCamera.transform.rotation;
-var mainPos = mainCamera.transform.position;
-
+var spawndistance : float = 156.0;
+var hero : Transform;
+var myTR : Transform;
 function Start () {
-
-
+	myTR = this.transform;
 }
-
 function Update () {
-
-this.transform.position = mainPos;
-this.transform.rotation = mainRot;
-
+	myTR.position = Vector3(mainCamera.position.x, mainCamera.position.y + spawndistance, mainCamera.position.z);
+	myTR.rotation = mainCamera.rotation;
 }

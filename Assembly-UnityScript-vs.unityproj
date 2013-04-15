@@ -47,6 +47,7 @@
      <Compile Include="Assets\CollectibleControl.js" />
      <Compile Include="Assets\blowdownthedoors.js" />
      <Compile Include="Assets\camHigh.js" />
+     <Compile Include="Assets\camLow.js" />
      <Compile Include="Assets\collectibletouch.js" />
      <Compile Include="Assets\counter.js" />
      <Compile Include="Assets\flipIt.js" />
@@ -54,6 +55,7 @@
      <Compile Include="Assets\openMe.js" />
      <Compile Include="Assets\openYourself.js" />
      <Compile Include="Assets\respawn.js" />
+     <Compile Include="Assets\spinit.js" />
      <Compile Include="Assets\touch.js" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
      <None Include="Assets\Standard Assets\Glass Refraction (Pro Only)\Sources\Shaders\Glass-Stained-BumpDistort.shader" />

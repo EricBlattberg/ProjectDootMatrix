@@ -300,7 +300,7 @@ public class HeroMotor : MonoBehaviour
 				{
 					if(Input.GetKeyDown("joystick button 3")){
 							Debug.Log("try to swandive");
-							doSwanDel();
+							moveState = MoveState.Evade;
 							
 						}
 					// Jump
