@@ -1,16 +1,24 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\spinit.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\CharacterSystem\Character_System\Scripts\HeroMotor.cs">
     <Files>
-      <File FileName="Assets\CharacterSystem\Character_System\Scripts\HeroMotor.cs" Line="303" Column="36" />
-      <File FileName="Assets\respawn.js" Line="5" Column="34" />
-      <File FileName="Assets\spinit.js" Line="11" Column="54" />
-      <File FileName="Assets\camLow.js" Line="2" Column="1" />
+      <File FileName="Assets\CharacterSystem\Character_System\Scripts\HeroMotor.cs" Line="1" Column="1" />
+      <File FileName="Assets\CharacterSystem\Character_System\Scripts\HeroCameraLow.cs" Line="1" Column="1" />
+      <File FileName="Assets\CharacterSystem\Character_System\Scripts\HeroClimb.cs" Line="1" Column="1" />
+      <File FileName="Assets\CharacterSystem\Character_System\Scripts\HeroAnim.cs" Line="1" Column="1" />
+      <File FileName="Assets\Standard Assets\Image Effects (Pro Only)\CameraMotionBlur.js" Line="1" Column="1" />
+      <File FileName="Assets\respawn.js" Line="1" Column="1" />
+      <File FileName="Assets\spinit.js" Line="1" Column="1" />
+      <File FileName="Assets\camLow.js" Line="1" Column="1" />
       <File FileName="Assets\camHigh.js" Line="1" Column="1" />
-      <File FileName="Assets\CharacterSystem\Character_System\Scripts\HeroCameraLow.cs" Line="4" Column="28" />
-      <File FileName="Assets\CharacterSystem\Character_System\Scripts\HeroClimb.cs" Line="18" Column="17" />
-      <File FileName="Assets\CharacterSystem\Character_System\Scripts\HeroAnim.cs" Line="652" Column="31" />
-      <File FileName="Assets\flipIt.js" Line="11" Column="1" />
+      <File FileName="Assets\flipIt.js" Line="1" Column="1" />
+      <File FileName="Assets\collectibletouch.js" Line="1" Column="1" />
+      <File FileName="Assets\LoadLevel.js" Line="8" Column="1" />
+      <File FileName="Assets\touch.js" Line="1" Column="1" />
+      <File FileName="Assets\blowdownthedoors.js" Line="1" Column="1" />
+      <File FileName="Assets\blink.js" Line="1" Column="1" />
+      <File FileName="Assets\blinking.js" Line="20" Column="1" />
+      <File FileName="Assets\CollectibleControl.js" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
