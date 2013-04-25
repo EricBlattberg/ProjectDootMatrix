@@ -1,13 +1,16 @@
 #pragma strict
 
 var speed : int = 1000;
+var currentRot : Vector3;
 
 function Start () {
+
+//currentRot = this.transform.rotation;
 
 }
 
 function Update () {
 
-transform.Rotate(0, Input.GetAxis("Horizontal")*speed/100, 0,Space.World);
+//this.transform.rotation.y = currentRot.y + speed;
 
 }

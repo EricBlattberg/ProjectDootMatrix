@@ -45,11 +45,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\CollectibleControl.js" />
-     <Compile Include="Assets\LoadLevel.js" />
-     <Compile Include="Assets\NewBehaviourScript.js" />
      <Compile Include="Assets\ReverseGravity.js" />
-     <Compile Include="Assets\blink.js" />
-     <Compile Include="Assets\blinking.js" />
      <Compile Include="Assets\blowdownthedoors.js" />
      <Compile Include="Assets\camHigh.js" />
      <Compile Include="Assets\camLow.js" />
@@ -59,6 +55,7 @@
      <Compile Include="Assets\howMany.js" />
      <Compile Include="Assets\openMe.js" />
      <Compile Include="Assets\openYourself.js" />
+     <Compile Include="Assets\pillHitTime.js" />
      <Compile Include="Assets\respawn.js" />
      <Compile Include="Assets\spinit.js" />
      <Compile Include="Assets\touch.js" />

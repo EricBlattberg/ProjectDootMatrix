@@ -377,7 +377,7 @@ public class HeroClimb : MonoBehaviour
 		}
 		climbState = ClimbState.Prepare;
 		
-		yield return new WaitForSeconds (0.05f);//transition to top
+		yield return new WaitForSeconds (0.2f);//transition to top
 		
 		if (Input.GetAxis("Vertical") > .5 && climbState == ClimbState.Prepare) // Climb up
 		{

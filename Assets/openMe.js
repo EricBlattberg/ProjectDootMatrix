@@ -17,7 +17,7 @@ function Update () {
 function OnTriggerEnter (other:Collider){
 	if(other.tag == "Player"){
 		//openDoor = true;
-		Application.LoadLevel("door1");
+		Application.LoadLevel("door1draft");
 	}
 
 }

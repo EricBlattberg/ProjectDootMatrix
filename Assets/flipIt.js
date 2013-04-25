@@ -8,7 +8,7 @@ var originalZRot : Quaternion = Quaternion.Euler(0,0,0);
 var angle : float = 180;
 var rotation : Quaternion = Quaternion.Euler(90,0,0);
 
-var aroundPlayer : Vector3 = hero.transform.position;
+//var aroundPlayer : Vector3 = hero.transform.position;
 
 var worldFlipped : boolean;
 

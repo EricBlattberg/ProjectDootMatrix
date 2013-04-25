@@ -31,6 +31,15 @@ public class HeroMotor : MonoBehaviour
 	public float groundDrag = 6.5f;
 	public float airDrag = 0.0f;
 	
+	public float speedTimer = 0.0f;//timer start
+	public float massTimer = 0.0f;
+	public float pillWorth = 10.0f;//timer add
+	public float pillAirDragMultiplier = 0.0f;
+	public float pillMoveMultiplier = 1.5f;//run multiplier
+	public float pillJumpMultiplier = 1.5f;//jump multiplier
+	public float pillAirMultiplier = 1.5f;
+	public float origJump = 1.4f;
+	
 	public float groundedOffsetRay = -0.1f;
 	const float groundedDistance = 0.5f;
 	const float inputThreshold = 0.01f;
@@ -86,9 +95,16 @@ public class HeroMotor : MonoBehaviour
 	bool isAfterStop = true;
 	bool canJump = true;
 	
+	public float fieldAdd = 0.0f;
+	
+	public float origField;
+
+	
 	//=================================================================================================================o
 	void Start ()
 	{
+		origField = Camera.main.fieldOfView;
+		
 		rb = rigidbody;
 		hero = transform;
 		rb.freezeRotation = true;
@@ -257,26 +273,89 @@ public class HeroMotor : MonoBehaviour
 			return hero.forward;
 	}
 	//=================================================================================================================o
+		//Start ability Timer
+	void hitSpeed ()
+	{
+		speedTimer += pillWorth;
+		fieldAdd += 9;
+	}
+	
+	void hitMass ()
+	{
+		massTimer += pillWorth;
+	}
+	
+	//=================================================================================================================o
 	void FixedUpdate ()
 	{
+		
+		if(speedTimer > 0){
+			speedTimer -= Time.deltaTime;
+		}
+		if(massTimer > 0){
+			massTimer -= Time.deltaTime;
+		}
 		
 		RaycastHit hit;
 		grounded = Physics.Raycast (hero.position + hero.up * -groundedOffsetRay,
 			hero.up * -1, out hit, groundedDistance, groundLayers);
 			
-		if(canMove && grounded){
+		//reverts physics to ground physics - sam
+		if(speedTimer <= 0){
+			if(canMove && grounded){
 			rb.drag = groundDrag;
 			walkSpeed = speedOrig;
 			sideSpeed = speedOrig;
 			speed = speedOrig;
 			StartCoroutine (JumpCoolDown(0f));
-		}
-		else{
+			}
+			else{
 			rb.drag = airDrag;
 			walkSpeed = airSpeed;
 			sideSpeed = sideAirSpeed;
 			speed = airSpeed;
+
 			}
+			}
+		else{
+			if(canMove && grounded){
+			rb.drag = groundDrag;
+			walkSpeed = speedOrig * pillMoveMultiplier;
+			sideSpeed = speedOrig * pillMoveMultiplier;
+			speed = speedOrig * pillMoveMultiplier;
+			StartCoroutine (JumpCoolDown(0f));
+			}
+			else{
+			rb.drag = airDrag * pillAirDragMultiplier;
+			walkSpeed = airSpeed * pillMoveMultiplier;
+			sideSpeed = sideAirSpeed * pillMoveMultiplier;
+			speed = airSpeed * pillMoveMultiplier;
+
+		}
+		}
+		if(massTimer <= 0){
+			if(canMove && grounded){
+			rb.drag = groundDrag;
+			StartCoroutine (JumpCoolDown(0f));
+			jumpPower = origJump;
+			}
+			else{
+			rb.drag = airDrag;
+			jumpPower = origJump;
+			}
+		}
+		else{
+			if(canMove && grounded){
+			rb.drag = groundDrag;
+			StartCoroutine (JumpCoolDown(0f));
+			jumpPower = origJump * pillJumpMultiplier;
+			}
+			else{
+			rb.drag = airDrag * 0;
+			jumpPower = origJump * pillJumpMultiplier;
+			}
+		}
+		
 		
 		if (canMove) //&& grounded)//grounded && 
 		{
@@ -289,6 +368,20 @@ public class HeroMotor : MonoBehaviour
 				Vector3 curVelocity = Input.GetAxis ("Vertical") * ForwardVec(hit)
 					+ Input.GetAxis ("Horizontal") * hero.right;
 				
+				
+				
+			if(speedTimer >= 0 ){
+				speedTimer -= Time.deltaTime;
+				fieldAdd -= Time.deltaTime * 2;
+				Camera.main.fieldOfView = origField + fieldAdd;
+					if(Camera.main.fieldOfView <= origField){
+						Camera.main.fieldOfView = origField;
+						}
+					}
+				else{
+				Camera.main.fieldOfView = origField;
+					}
+				
 				//Debug.Log(Input.GetAxis("Vertical"));
 				
 				//Debug.Log("curVelocity is " +curVelocity );
@@ -300,10 +393,31 @@ public class HeroMotor : MonoBehaviour
 				{
 					if(Input.GetKeyDown("joystick button 3")){
 							Debug.Log("try to swandive");
-							moveState = MoveState.Evade;
+							//animation.Play("swim");
 							
 						}
 					// Jump
+//					if (Input.GetKey (hKey.jumpKey) && canJump && grounded && pillTimer > 0)
+//					{
+//						
+//						//grounded = false;
+//						rb.drag = airDrag;
+//						walkSpeed = airSpeed;
+//						sideSpeed = sideAirSpeed;
+//						speed = airSpeed;
+//						
+//						rb.AddForce (jumpPower * hero.up + 
+//							rb.velocity.normalized /10f, ForceMode.VelocityChange);
+//						
+//						// Jump delegate
+//						if (doJumpDel != null) { doJumpDel(); }
+//	
+//
+//						
+//						// Start cooldown until we can jump again
+//							StartCoroutine (JumpCoolDown(5f));
+//					}
+					
 					if (Input.GetKey (hKey.jumpKey) && canJump && grounded)
 					{
 						
